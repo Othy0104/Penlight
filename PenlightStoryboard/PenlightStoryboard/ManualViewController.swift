@@ -1,8 +1,11 @@
-//
-//  ManualViewController.swift
-//  PenlightStoryboard
-//
-//  Created by 大竹啓之 on 2025/11/05.
-//
+import UIKit
 
-import Foundation
+class ManualViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .systemBlue // 画面ごとに色を変えると分かりやすい
+        print("✅ マニュアル画面が表示されました")
+    }
+
+}

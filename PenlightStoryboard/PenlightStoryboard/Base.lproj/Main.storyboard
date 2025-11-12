@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="E3s-QM-TEV">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -9,120 +9,132 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--接続画面-->
+        <scene sceneID="WMT-ug-Gkd">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PenlightStoryboard" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="FpS-kK-NHY" customClass="ConnectionViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QL4-ix-UVy">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="PaletteSync" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Xfa-KH-SCU">
-                                <rect key="frame" x="0.0" y="20" width="180" height="100"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="接続画面" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8c-zu-Rsh">
+                                <rect key="frame" x="140" y="408" width="113" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="maa-2h-Hjg">
-                                <rect key="frame" x="0.0" y="694" width="390" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <items>
-                                    <tabBarItem systemItem="favorites" id="7Oe-49-gEe"/>
-                                    <tabBarItem systemItem="more" id="Qyu-OU-MiU"/>
-                                </items>
-                            </tabBar>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="OP6-7j-vjq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Xfa-KH-SCU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BNA-8I-7XK"/>
-                        </constraints>
                     </view>
-                    <toolbarItems/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <tabBarItem key="tabBarItem" title="接続画面" image="wrench" catalog="system" id="JiD-Jw-8XU"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qdd-N2-XGK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135.38461538461539" y="130.80568720379145"/>
+            <point key="canvasLocation" x="2639" y="-213"/>
         </scene>
-        <!--Connection View Controller-->
-        <scene sceneID="KRU-r2-G7s">
+        <!--Tab Bar Controller-->
+        <scene sceneID="ImA-gJ-kHb">
             <objects>
-                <viewController storyboardIdentifier="ConnectionViewController" id="I75-Qk-ceE" customClass="ConnectionViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="neK-xs-ghm">
+                <tabBarController id="E3s-QM-TEV" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TNe-5c-e5N">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="K12-oR-QAf" kind="relationship" relationship="viewControllers" id="4be-9t-YFp"/>
+                        <segue destination="QZU-3V-9bU" kind="relationship" relationship="viewControllers" id="ffO-Ar-IEo"/>
+                        <segue destination="FpS-kK-NHY" kind="relationship" relationship="viewControllers" id="pcc-F9-7Gc"/>
+                        <segue destination="2bn-8i-3uI" kind="relationship" relationship="viewControllers" id="mSA-Id-7nu"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mVC-zB-ipC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="891" y="106"/>
+        </scene>
+        <!--マーク作成画面-->
+        <scene sceneID="gSm-Em-Jiw">
+            <objects>
+                <viewController id="2bn-8i-3uI" customClass="MarkViewController" customModule="PenlightStoryboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lMx-dh-mlE">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="接続画面" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBu-gX-2uT">
-                                <rect key="frame" x="120" y="398" width="150" height="48"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="マーク作成" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWX-gY-V37">
+                                <rect key="frame" x="126" y="408" width="141" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="mDH-Qm-DvX"/>
+                        <viewLayoutGuide key="safeArea" id="tOt-NP-FFp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="IfL-ws-oAV"/>
+                    <tabBarItem key="tabBarItem" title="マーク作成画面" image="pencil" catalog="system" id="ONw-FM-9G8"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Of0-Tp-m12" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Ej-dS-xhZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1320" y="-648"/>
+            <point key="canvasLocation" x="2639" y="420"/>
         </scene>
-        <!--Manual View Controller-->
-        <scene sceneID="cz5-Zg-14b">
+        <!--ホーム画面-->
+        <scene sceneID="mT8-GT-rnj">
             <objects>
-                <viewController storyboardIdentifier="ManualViewController" id="6sg-Q9-eWY" customClass="ManualViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="eLQ-vb-qvF">
+                <viewController title="ホーム画面" id="K12-oR-QAf" customClass="ViewController" customModule="PenlightStoryboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NPs-bx-Hhp">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="snz-kv-uMG">
-                                <rect key="frame" x="152" y="401" width="87" height="42"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ホーム画面" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWn-cj-d9s">
+                                <rect key="frame" x="126" y="408" width="141" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="eBA-cV-PqY"/>
+                        <viewLayoutGuide key="safeArea" id="BqX-Jq-0TT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="RaY-Ew-RHb"/>
+                    <tabBarItem key="tabBarItem" title="ホーム" image="house" catalog="system" id="pw8-Ak-0Cx"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LMK-S3-xlu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lBi-Ta-UsU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1320" y="131"/>
+            <point key="canvasLocation" x="1792" y="-212"/>
         </scene>
-        <!--Mark View Controller-->
-        <scene sceneID="HRq-4W-sEd">
+        <!--マニュアル画面-->
+        <scene sceneID="Bky-DT-2sa">
             <objects>
-                <viewController storyboardIdentifier="MarkViewController" id="3CD-Rx-Tce" customClass="MarkViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hYc-q1-How">
+                <viewController title="マニュアル画面" id="QZU-3V-9bU" customClass="ManualViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wPk-Qg-0OJ">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="マーク作成" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIh-ir-aNp">
-                                <rect key="frame" x="101" y="398" width="188" height="48"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="マニュアル画面" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8s-8c-c6U">
+                                <rect key="frame" x="98" y="408" width="197" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="b3d-mk-lOW"/>
+                        <viewLayoutGuide key="safeArea" id="f7T-Gg-llA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="マニュアル" image="doc" catalog="system" id="hMV-Ru-gch"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GZn-au-CUA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ooK-sM-W4f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1320" y="908"/>
+            <point key="canvasLocation" x="1792" y="420"/>
         </scene>
     </scenes>
     <resources>
+        <image name="doc" catalog="system" width="115" height="128"/>
+        <image name="house" catalog="system" width="128" height="104"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="wrench" catalog="system" width="128" height="124"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
